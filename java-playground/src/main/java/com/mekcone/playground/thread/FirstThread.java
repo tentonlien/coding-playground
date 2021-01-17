@@ -5,18 +5,19 @@ package com.mekcone.playground.thread;
  */
 public class FirstThread extends Thread {
     private int i;
+    private final static int LOOP_NUM = 100;
 
-    // 重写 run() 方法，即线程执行体；
+    // 重写 run() 方法，即线程执行体
     @Override
     public void run() {
-        for (; i < 100; i ++) {
+        for (; i < LOOP_NUM; i ++) {
             // 继承 Thread 类时，直接使用 this 可以获得当前进程
             System.out.println(getName() + " " + i);
         }
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < 100; i ++) {
+        for (int i = 0; i < LOOP_NUM; i ++) {
             // 调用 currentThread() 方法获取当前线程；
             System.out.println(Thread.currentThread().getName() + " " + i);
             if (i == 20) {

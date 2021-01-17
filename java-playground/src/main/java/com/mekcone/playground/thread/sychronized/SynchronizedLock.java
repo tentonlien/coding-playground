@@ -14,6 +14,7 @@ public class SynchronizedLock implements Runnable {
     private static Integer balance = 1000;
     private static List<TransactionRecord> transactionRecordList = new ArrayList<TransactionRecord>();
 
+    @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
             try {

@@ -15,16 +15,18 @@ public class DateTest {
 
     public static void main(String[] args) {
         // Java 1.0
+        System.out.println("Java 1.0 API");
         dateAPI();
 
         // Java 8
+        System.out.println("\nJava 8 API");
         LocalDateAPI();
 
     }
 
     public static void dateAPI() {
         Date date = new Date(YEAR - 1900, MONTH - 1, DAY);
-        System.out.println(date.toString());
+        System.out.println("Date: " + date.toString());
     }
 
     public static void LocalDateAPI() {
@@ -36,7 +38,7 @@ public class DateTest {
         DayOfWeek dow = date.getDayOfWeek();
         int len = date.lengthOfMonth();
         boolean leap = date.isLeapYear();
-        System.out.println(date.toString());
+        System.out.println("LocalDate: " + date.toString());
         System.out.println("Year: " + year);
         System.out.println("Month: " + month + " (" + monthValue + ")");
         System.out.println("Day of Month: " + day);
