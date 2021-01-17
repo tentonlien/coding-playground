@@ -1,4 +1,6 @@
 java-playground/.idea/
+go-playground/*/.idea/
 
 *.iml
 *.class
+
