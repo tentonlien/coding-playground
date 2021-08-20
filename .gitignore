@@ -1,6 +1,10 @@
 java-playground/.idea/
 go-playground/*/.idea/
+scala-playground/.bsp
+scala-playground/.idea
+scala-playground/target
+scala-playground/project/target
 
+**/target
 *.iml
 *.class
-
