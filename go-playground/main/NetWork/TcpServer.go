@@ -10,10 +10,10 @@ import (
 
 func main() {
 	var tcpAddr *net.TCPAddr
-	tcpAddr, _ = net.ResolveTCPAddr("tcp", "127.0.0.1:8080")
+	tcpAddr, _ = net.ResolveTCPAddr("tcp", "127.0.0.1:16379")
 	tcpListener, _ := net.ListenTCP("tcp", tcpAddr)
 	defer tcpListener.Close()
-	fmt.Printf("TCP server listening on port 8080...")
+	fmt.Println("TCP server listening on port 8080...")
 	for {
 		tcpConn, err := tcpListener.AcceptTCP()
 		if err != nil {
@@ -26,6 +26,7 @@ func main() {
 
 }
 
+
 func tcpPipe(conn *net.TCPConn) {
 	ipStr := conn.RemoteAddr().String()
 	defer func() {
@@ -33,20 +34,17 @@ func tcpPipe(conn *net.TCPConn) {
 		conn.Close()
 	}()
 	reader := bufio.NewReader(conn)
-	i := 0
+
 	for {
 		message, err := reader.ReadString('\n')
 		if err != nil || err == io.EOF {
 			break
 		}
-		fmt.Println(string(message))
+		fmt.Println(message)
 		time.Sleep(time.Millisecond * 2)
-		msg := time.Now().String() + conn.RemoteAddr().String() + "Server say hello!\n"
+		fmt.Println("Write...")
+		msg := time.Now().String() + conn.RemoteAddr().String() + " server say hello!\n"
 		b := []byte(msg)
 		conn.Write(b)
-		i ++
-		if i > 10 {
-			break
-		}
 	}
 }
