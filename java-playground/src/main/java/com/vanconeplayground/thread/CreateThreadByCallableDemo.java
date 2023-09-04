@@ -1,11 +1,11 @@
-package com.mekcone.playground.thread;
+package com.vanconeplayground.thread;
 
 import java.util.concurrent.FutureTask;
 
 /**
  * @author Tenton Lien
  */
-public class ThirdThread {
+public class CreateThreadByCallableDemo {
     public static void main(String[] args) {
         FutureTask<Integer> task = new FutureTask<>(() -> {
             int i = 0;

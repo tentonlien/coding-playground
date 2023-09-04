@@ -1,4 +1,4 @@
-package com.mekcone.playground.oop;
+package com.vanconeplayground.oop;
 
 /**
  * @author Tenton Lien

@@ -1,11 +1,13 @@
-package com.mekcone.playground.thread;
+package com.vanconeplayground.thread;
 
 /**
  * @author Tenton Lien
  */
-public class SecondThread implements Runnable {
+public class CreateThreadByRunnableDemo implements Runnable {
     private int i;
 
+
+    @Override
     public void run() {
         for (; i < 100; i ++) {
             // 不能直接通过 this 获取当前线程对象
@@ -18,11 +20,11 @@ public class SecondThread implements Runnable {
             System.out.println(Thread.currentThread().getName() + " " + i);
 
             if (i == 20) {
-                SecondThread secondThread = new SecondThread();
+                CreateThreadByRunnableDemo createThreadByRunnableDemo = new CreateThreadByRunnableDemo();
 
                 // 通过 new Thread(target, name) 创建新线程
-                new Thread(secondThread, "新线程1").start();
-                new Thread(secondThread, "新线程2").start();
+                new Thread(createThreadByRunnableDemo, "新线程1").start();
+                new Thread(createThreadByRunnableDemo, "新线程2").start();
             }
         }
     }

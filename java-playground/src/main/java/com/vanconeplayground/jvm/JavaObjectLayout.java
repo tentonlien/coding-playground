@@ -1,4 +1,4 @@
-package com.mekcone.playground.jvm;
+package com.vanconeplayground.jvm;
 
 import org.openjdk.jol.info.ClassLayout;
 

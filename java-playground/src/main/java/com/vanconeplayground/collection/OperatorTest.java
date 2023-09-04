@@ -1,4 +1,4 @@
-package com.mekcone.playground.collection;
+package com.vanconeplayground.collection;
 
 /**
  * @author Tenton Lien

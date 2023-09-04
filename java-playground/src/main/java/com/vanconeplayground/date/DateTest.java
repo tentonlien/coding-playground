@@ -1,4 +1,4 @@
-package com.mekcone.playground.date;
+package com.vanconeplayground.date;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

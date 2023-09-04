@@ -1,4 +1,4 @@
-package com.mekcone.playground.thread.sychronized;
+package com.vanconeplayground.thread.sychronized;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
-package com.mekcone.playground.thread;
+package com.vanconeplayground.thread;
 
 /**
  * @author Tenton Lien
  */
-public class FirstThread extends Thread {
+public class CreateThreadByDerivedThreadDemo extends Thread {
     private int i;
     private final static int LOOP_NUM = 100;
 
@@ -22,9 +22,9 @@ public class FirstThread extends Thread {
             System.out.println(Thread.currentThread().getName() + " " + i);
             if (i == 20) {
                 // 创建并启动第一个线程
-                new FirstThread().start();
+                new CreateThreadByDerivedThreadDemo().start();
                 // 创建并启动第二个线程
-                new FirstThread().start();
+                new CreateThreadByDerivedThreadDemo().start();
             }
         }
     }
