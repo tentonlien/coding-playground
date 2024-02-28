@@ -1,4 +1,4 @@
-package com.vanconeplayground.thread.database;
+package com.vancone.playground.thread.database;
 
 import lombok.SneakyThrows;
 

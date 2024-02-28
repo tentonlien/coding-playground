@@ -1,4 +1,4 @@
-package com.vanconeplayground.thread.sychronized;
+package com.vancone.playground.thread.sychronized;
 
 import lombok.Data;
 

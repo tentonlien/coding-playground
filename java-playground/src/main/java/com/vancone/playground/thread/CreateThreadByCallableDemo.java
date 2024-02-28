@@ -1,4 +1,4 @@
-package com.vanconeplayground.thread;
+package com.vancone.playground.thread;
 
 import java.util.concurrent.FutureTask;
 

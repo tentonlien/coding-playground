@@ -1,4 +1,4 @@
-package com.vanconeplayground.collection.map;
+package com.vancone.playground.collection.map;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.vanconeplayground.thread;
+package com.vancone.playground.thread;
 
 /**
  * @author Tenton Lien
